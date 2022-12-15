@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/nameView"
             android:text="text"
             android:textColor="@color/black"
             android:textSize="24sp"
