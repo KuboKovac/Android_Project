@@ -1,12 +1,18 @@
 package com.example.android_app.dataClasses
 
-import java.io.Serializable
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import java.util.Date
 
-data class Vehicle(var name: String, var licensePlate:String) : Serializable {
-
-
-
-    override fun toString(): String {
-        return "Vehicle '$name', '$licensePlate' "
-    }
-}
+@Entity(tableName = "vehicles")
+data class Vehicle(
+    @PrimaryKey(autoGenerate = true) val id: Int?,
+    @ColumnInfo(name = "name") val name: String?,
+    @ColumnInfo(name = "brand") val brand: String?,
+    @ColumnInfo(name = "description") val description: String?,
+    @ColumnInfo(name = "license_plate") val licensePlate: String?,
+    @ColumnInfo(name = "emission_inspection") val emissionInspection: Int?,
+    @ColumnInfo(name = "technical_inspection") val technicalInspection: Int?,
+    @ColumnInfo(name = "picture_url") val pictureUrl: String?
+)
